@@ -10,7 +10,7 @@ function Navbar() {
 
     
     const dispatch = useDispatch();
-    const {userLoggedIn} = useSelector((state) => state.auth);
+    const {userData} = useSelector((state) => state.auth);
     const navigate = useNavigate()
 
   return (
@@ -23,21 +23,21 @@ function Navbar() {
 
         <div className='flex items-center gap-x-4'>
        
-            {!userLoggedIn && 
+            {!userData && 
                 <Link to="/login">
                     <button className='bg-richblack-800 text-white py-[8px] px-[12px] rounded-[8px] border border-richblack-700'>
                         Login
                     </button>
                 </Link>
             }
-            {!userLoggedIn  && 
+            {!userData  && 
                 <Link to="/signup">
                     <button className='bg-richblack-800 text-white py-[8px] px-[12px] rounded-[8px] border border-richblack-700'>
                         Sign up
                     </button>
                 </Link>
             }
-            { userLoggedIn &&
+            { userData &&
                 <Link to="/">
                     <button onClick={() => {
                         dispatch(logout(navigate));                    
@@ -46,7 +46,7 @@ function Navbar() {
                     </button>
                 </Link>
             }
-            { userLoggedIn &&
+            { userData &&
                 <Link to="/dashboard">
                     <button className='bg-richblack-800 text-white py-[8px] px-[12px] rounded-[8px] border border-richblack-700'>
                         Dashboard
