@@ -6,7 +6,7 @@ In this project, you can upload, download, and delete files.
 Please follow the steps below to get started:
 
 1. Clone this repository using:
-git clone <repository-url>
+git clone https://github.com/arb7281/Mobigic-Fileupload.git
 
 2. Navigate to the fileupload-client folder:
    cd fileupload-client
