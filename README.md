@@ -23,3 +23,5 @@ git clone https://github.com/arb7281/Mobigic-Fileupload.git
 
 5. Run the following command to start the server and client concurrently:
    npm run dev
+
+   ,,
